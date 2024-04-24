@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="../../favicon_32_32_compress.ico" />
+    <title>CSS Envelope + Letter (Open/Close on Click)</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <h1>FELICES 3 MESES MI AMOR</h1>
+    <div class="container">
+      <div class="envelope-wrapper">
+        <div class="center">
+          <div class="heart" onclick="toggle(this)">
+            <p id="textInner" class="heart-text" style="opacity: 0; display: none">
+              Happy Valentine's Day!
+              <br />
+      
+            </p>
+            <p class="instructions">(Click me!)</p>
+          </div>
+        </div>
+        <div class="envelope">
+          <div class="letter">
+            <div class="text">
+              <strong>Amor mío.</strong>
+              <p>
+                Felices 3 meses, te amo mucho 💕, pero mucho mi vida 💕 , espero
+                que sean muchisimos mas meses a tu lado. Eres lo mejor que me
+                esta pasando y te doy las gracias por estar a mi lado las veces
+                que te he necesitado Muchas gracias por hacerme sonreir cuando
+                estaba apagado. Siempre que te veo me alegras y le das sentido a
+                mi vida. No tengo palabras para demostrarte lo mucho que te
+                quiero. Lo eres todo para mi, eres la mejor persona de este
+                mundo, me encantas en todos los sentidos. A pesar de nuestros
+                conflictos que tenemos, te sigo queriendo y amando como la
+                primera vez que lo hice. En fin soy muy feliz a tu lado.
+              </p>
+
+              <p class="signature">Te amo mucho mi niña<br />Atte Julio</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="heart"></div>
+      </div>
+      <img src="Bet.jpeg" alt="Bet" class="img-right" />
+      <img src="Bet2.jpeg" alt="Bet2" class="img-left" />
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@latest"></script>
+    <script src="index.js"></script>
+    <!-- Default Statcounter code for BestCodes's Website
+  https://the-best-codes.github.io/ -->
+    <script type="text/javascript">
+      var sc_project = 12947838;
+      var sc_invisible = 1;
+      var sc_security = "64126f45";
+    </script>
+    <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+    <noscript>
+      <div class="statcounter">
+        <a title="Web Analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/12947838/0/64126f45/1/" alt="Web Analytics" referrerpolicy="no-referrer-when-downgrade" /></a>
+      </div>
+    </noscript>
+    <!--Confetti-->
+
+      <script src="index.js"></script>
+
+    <script src="canvas-confetti.min.js"></script>
+    <script>
+      const envelope = document.querySelector(".envelope-wrapper");
+      envelope.addEventListener("click", (
+        
+      ) => {
+        envelope.classList.toggle("flap");
+        // Agregar lanzamiento de confeti
+        confetti({
+          particleCount: 100,
+          spread: 70,
+          origin: { y: 0.6 },
+        });
+      });
+    </script>
+  </body>
+</html>
